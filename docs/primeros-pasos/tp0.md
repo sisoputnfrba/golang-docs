@@ -35,7 +35,7 @@ otro concepto en los [medios de consulta de la práctica](/consultas).
 ## Requisitos
 
 - [Contar con un entorno Linux](/primeros-pasos/entorno-linux)
-- [Tener configuradas las commons y git](/primeros-pasos/entorno-desarrollo)
+- Tener configuradas las commons y git
 - Tener a mano el [repo del TP0](https://faq.utnso.com.ar/tp0)
 
 ## Etapa 1: Setup inicial
@@ -176,13 +176,6 @@ necesario liberarla usando
 
 :::
 
-::: tip
-
-Para más info sobre algunas features más avanzadas de `readline()`, pueden
-consultar la [guía de readline](/guias/programacion/readline).
-
-:::
-
 ### Strings
 
 Terminando con esta etapa, nos gustaría que el TP0 lea de consola todas las
@@ -211,14 +204,6 @@ biblioteca estándar de C para comparar strings. En este caso, compararíamos lo
 que nos devuelva `readline()` con un string vacío `""` para saber si debemos
 salir del bucle o no.
 
-::: warning IMPORTANTE
-
-Si en alguna etapa del TP el programa no se comporta como esperaban, pueden
-intentar ejecutarlo línea por línea siguiendo el
-[tutorial de debugging en Eclipse](/guias/herramientas/debugger).
-
-:::
-
 ::: tip
 
 Las commons también proveen funciones para simplificar el manejo de strings.
@@ -228,13 +213,6 @@ Pueden consultar su documentación leyendo los
 :::
 
 ## Etapa 3: Programar el Cliente-Servidor
-
-::: warning IMPORTANTE
-
-Para poder ayudar con los conceptos y aspectos técnicos de esta estapa tienen
-disponible la [guía de sockets](/guias/linux/sockets).
-
-:::
 
 A partir de esta etapa, vamos a plantear una arquitectura
 [cliente-servidor](https://es.wikipedia.org/wiki/Cliente-servidor). Para esta
@@ -301,14 +279,6 @@ lo que hay que "sumarle 1".
 Usando `enviar_mensaje()` para enviar nuestro valor de config y
 `enviar_paquete()` para enviar las líneas de consola, deberíamos poder resolver
 el entregable.
-
-::: tip
-
-En el TP van a necesitar enviar estructuras más complejas que un string. Para
-hacerlo, pueden consultar nuestra
-[guía de serialización](/guias/linux/serializacion).
-
-:::
 
 ## Notas finales
 

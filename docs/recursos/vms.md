@@ -72,8 +72,7 @@ Dejamos un tutorial sobre cómo verificar que la descarga ha sido exitosa en la
 ::: tip TIP 2
 
 Con esto ya tenemos todo lo necesario para continuar con la
-[guía de despliegue](/guias/herramientas/deploy#practicar).
-
+guía de despliegue.
 :::
 
 
