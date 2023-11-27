@@ -13,9 +13,7 @@
     "name": "sisoputnfrba"
   },
   "contributors": [
-    "Agustín Ranieri",
-    "Sofía Azcoaga",
-    "Damian Facchini"
+    "Nahuel Mazzeo"
   ],
   "license": "MIT",
   "devDependencies": {
