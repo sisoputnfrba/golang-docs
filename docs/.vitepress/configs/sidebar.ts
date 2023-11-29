@@ -115,7 +115,7 @@ export const sidebar: DefaultTheme.Sidebar = [
         link: '/guias/programacion/threads'
       },
       {
-        text: 'Sincronización - sem y mutex',
+        text: 'Sincronización',
         link: '/guias/programacion/synchronization'
       },
       {
