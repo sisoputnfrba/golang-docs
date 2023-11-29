@@ -81,7 +81,7 @@ for i := 0; i < MaxGoroutines; i++ {
 }
 ```
 
-# Cómo elegir que usar 
+## Cómo elegir que usar 
 
 `sync.WaitGroup` se utiliza principalmente para esperar la finalización de un conjunto específico de rutinas antes de continuar la ejecución. Útil cuando el número de rutinas es conocido de antemano.
 
@@ -89,7 +89,7 @@ for i := 0; i < MaxGoroutines; i++ {
 
 `chan` se utiliza sin necesitass comunicación y sincronización entre rutinas o si necesitas controlar el acceso a un recurso compartido.
 
-# Volviendo a nuestro ejemplo
+## Volviendo a nuestro ejemplo
 
 Volviendo a nuestro ejemplo de la sección anterior (adjunto a continuación):
 
