@@ -103,6 +103,10 @@ export const sidebar: DefaultTheme.Sidebar = [
         link: '/guias/programacion/variables-functions'
       },
       {
+        text: 'Operadores',
+        link: '/guias/programacion/operators'
+      },
+      {
         text: 'Sentencias',
         link: '/guias/programacion/sentences'
       },
@@ -111,7 +115,7 @@ export const sidebar: DefaultTheme.Sidebar = [
         link: '/guias/programacion/threads'
       },
       {
-        text: 'Sincronización - sem y mutex',
+        text: 'Sincronización',
         link: '/guias/programacion/synchronization'
       },
       {
