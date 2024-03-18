@@ -119,20 +119,20 @@ export const sidebar: DefaultTheme.Sidebar = [
         link: '/guias/programacion/synchronization'
       },
       {
-        text: 'Imperativo vs Objectos',
-        link: '/guias/programacion/objects'
+        text: 'Protocolo HTTP',
+        link: '/guias/programacion/http-protocol'
       },
       {
         text: 'Bibliotecas - func compartidas',
         link: '/guias/programacion/libraries'
       },
       {
-        text: 'Protocolo HTTP - GIN',
-        link: '/guias/programacion/http-protocol'
-      },
-      {
         text: 'Manejo de archivos',
         link: '/guias/programacion/file-management'
+      },
+      {
+        text: 'Estructura de proyecto',
+        link: '/guias/programacion/objects'
       },
       {
         text: 'Logging',
