@@ -344,6 +344,7 @@ En este ejemplo vemos que primero debemos transformar nuestro objeto en un texto
 En este ejemplo veremos como hacer para devolver desde un servidor un objeto y obtenerlo desde un cliente. Cabe aclarar que este ejemplo es una combinacion de "Marshal" y "Unmarhal" ya vistos.
 
 ```go server
+// server.go
 package main
 
 import (
@@ -389,6 +390,7 @@ func HelloWorld(w http.ResponseWriter, r *http.Request) {
 ```
 
 ```go client
+// client.go
 package main
 
 import (
