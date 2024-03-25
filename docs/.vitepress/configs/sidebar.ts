@@ -39,12 +39,8 @@ export const sidebar: DefaultTheme.Sidebar = [
     collapsed: true,
     items: [
       {
-        text: 'Video de Introducción al TP',
-        link: '/primeros-pasos/'
-      },
-      {
         text: '¿Dónde me anoto?',
-        link: '/primeros-pasos/donde-me-anoto'
+        link: '/primeros-pasos/'
       },
       {
         text: 'Normas del Trabajo Práctico',
