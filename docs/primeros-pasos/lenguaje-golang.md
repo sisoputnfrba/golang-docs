@@ -35,4 +35,4 @@ El comando `go run` nos permite ejecutar el código que le pasaremos como segund
 
 ## Próximos Pasos...
 
-Para no expandir mucha esta sección decidimos crear una [sección](https://docs.utnso.com.ar/guias/programacion/introduction) dentro de esta web exclusiva para el lenguaje Go donde explicaremos varias cosas de su funcionamiento y como manejarnos de una manera efectiva y productiva dentro de el.
+Para no expandir mucha esta sección decidimos crear una [sección](https://golang.utnso.com.ar/guias/programacion/introduction) dentro de esta web exclusiva para el lenguaje Go donde explicaremos varias cosas de su funcionamiento y como manejarnos de una manera efectiva y productiva dentro de el.
