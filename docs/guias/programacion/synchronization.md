@@ -66,7 +66,7 @@ go func() {
 valor := <-ch
 ```
 
-Los canales tambien pueden ser usados como semaforos o para controlar el accesso a recursos compartidos. No esta diseññados especificamente para la comunicación, sino para controlar el acceso de múltiples rutinas a una sección crítica. Los semáforos mantienen un recuento que permite que un cierto número de rutinas accedan a una sección crítica simultáneamente.
+Los canales tambien pueden ser usados como semáforos o para controlar el accesso a recursos compartidos. No esta diseññados especificamente para la comunicación, sino para controlar el acceso de múltiples rutinas a una sección crítica. Los semáforos mantienen un recuento que permite que un cierto número de rutinas accedan a una sección crítica simultáneamente.
 
 Un ejemplo de su sintaxis:
 
@@ -87,7 +87,7 @@ for i := 0; i < MaxGoroutines; i++ {
 
 `sync.Mutex` se utiliza para lograr la exclusión mutua y evitar condiciones de carreras
 
-`chan` se utiliza sin necesitass comunicación y sincronización entre rutinas o si necesitas controlar el acceso a un recurso compartido.
+`chan` se utiliza si se necesita comunicación y sincronización entre rutinas o si se necesita controlar el acceso a un recurso compartido.
 
 ## Volviendo a nuestro ejemplo
 
@@ -329,7 +329,7 @@ Como habiamos dicho previamente, los canales son utilizados como semaforos y si 
 
 ## Productor Consumidor
 
-Bien, veamos un ejemplo ahora de todo lo que hicimos en conjunto. aplicando mutex y semaforos. Para esto vamos a hacer un ejercicio de productor consumidor en el cual pueda haber un stock de hasta tres elementos en el mercado y el consumidor vaya consumiendo. Cabe aclarar que este programa no tendra un corte asi que lo dejaremos correr un rato y luego lo finalizaremos desde la consola con `Ctrl+C`
+Bien, veamos un ejemplo ahora de todo lo que hicimos en conjunto aplicando mutex y semaforos. Para esto vamos a hacer un ejercicio de productor consumidor en el cuál pueda haber un stock de hasta tres elementos en el mercado y el consumidor vaya consumiendo. Cabe aclarar que este programa no tendrá un corte, así que lo dejaremos correr un rato y luego lo finalizaremos desde la consola con `Ctrl+C`
 
 ```go
 package main
@@ -426,4 +426,4 @@ Consumimos el valor  1969
 ...
 ```
 
-Como vemos en este ejemplo, estamos combinando las 3 herramientas de sincronización. Usamos `sync.WaitGroup` para esperar a que nuestros productores y consumidores finalicen y no se cierre la función main. Usamos `sync.Mutex` para la región crítica y garantizar la mutua exclusión de las variables globales "valor" y "valores" y usamos dos semaforos inicializados en 0 y en 3 para manejar los productores y consumidores.
+Como vemos en este ejemplo, estamos combinando las 3 herramientas de sincronización. Usamos `sync.WaitGroup` para esperar a que nuestros productores y consumidores finalicen y no se cierre la función main. Usamos `sync.Mutex` para la región crítica y garantizar la mutua exclusión de las variables globales "valor" y "valores" y usamos dos semáforos inicializados en 0 y en 3 para manejar los productores y consumidores.

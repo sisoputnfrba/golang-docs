@@ -1,8 +1,8 @@
 # Protocolo HTTP
 
-El http (del inglés HyperText Transfer Protocol o Protocolo de Transferencia de Hiper Textos) es el protocolo de transmisión de información de internet, es decir, el código que se establece para que el computador solicitante y el que contiene la información solicitada puedan “hablar” un mismo idioma a la hora de transmitir información por la red.
+El HTTP (del inglés HyperText Transfer Protocol o Protocolo de Transferencia de Hiper Textos) es el protocolo de transmisión de información de internet, es decir, el código que se establece para que el computador solicitante y el que contiene la información solicitada puedan “hablar” un mismo idioma a la hora de transmitir información por la red.
 
-Como todo protocolo, se mantiene criterios de sintaxis y semantica tanto que permiten lograr la comunicación entre los diferentes elemetos que se encuentran en internet: servidores, clientes, proxies, etc. Se trata de un protocolo “sin estado”, vale decir, que no lleva registro de visitas anteriores sino que siempre empieza de nuevo. La información relativa a visitas previas se almacena en estos sistemas en las llamadas “cookies”, almacenadas en el sistema cliente.
+Como todo protocolo, se mantiene criterios de sintaxis y semántica tanto que permiten lograr la comunicación entre los diferentes elementos que se encuentran en internet: servidores, clientes, proxies, etc. Se trata de un protocolo “sin estado”, vale decir, ya que no lleva registro de visitas anteriores sino que siempre empieza de nuevo. La información relativa a visitas previas se almacena en estos sistemas en las llamadas “cookies”, almacenadas en el sistema cliente.
 
 Es un "lenguaje" que media entre las peticiones del cliente y las respuestas del servidor en la Internet, para permitir una comunicación fluida y en un mismo “lenguaje”. Este protocolo establece las pautas a seguir, los métodos de petición (llamados “verbos”) y cuenta con cierta flexibilidad para incorporar nuevas peticiones y funcionalidades, en especial a medida que se avanza en sus versiones.
 
@@ -16,7 +16,7 @@ El protocolo será utilizado como medio de comunicación entre los distintos mó
 
 ## En Golang
 
-Golang posee abstracciones que permiten trabajar el protocolo a alto nivel, es decir, no tener que realizar la comunicación y el intercambio de mensajes como lo hace el protocolo (esto pasa en la mayoria de los lenguajes de programación).
+Golang posee abstracciones que permiten trabajar el protocolo a alto nivel, es decir, no tener que realizar la comunicación y el intercambio de mensajes como lo hace el protocolo (esto pasa en la mayoría de los lenguajes de programación).
 
 Para esto, se utiliza la biblioteca `net/http` que nos permitirá generar distintos puntos de entrada (o Endpoints) o realizar distintas peticiones en caso de ser cliente. Empecemos a ver distintos ejemplos.
 
@@ -52,17 +52,17 @@ func HelloWorld(w http.ResponseWriter, r *http.Request) {
 }
 ```
 
-En este ejemplo vemos como indicamos a nuestro codigo que va a tener un endpoint en `GET /helloworld` y será administrado por la función `HelloWorld`. Por otro lado, vemos que definimos que nuestro server estará en el puerto "8080" definido a través de la funcion `http.ListenAndServe` la cual inicializa y levanta nuestra aplicación. Cabe aclarar que ejecutar esta función hara que nuestro proyecto al correrlo "no finalice" ya que la misma deja un hilo escuchando en un socket del puerto "8080".
+En este ejemplo vemos como indicamos a nuestro codigo que va a tener un endpoint en `GET /helloworld` y será administrado por la función `HelloWorld`. Por otro lado, vemos que definimos que nuestro server estará en el puerto "8080" definido a través de la funcion `http.ListenAndServe` la cual inicializa y levanta nuestra aplicación. Cabe aclarar que ejecutar esta función hará que nuestro proyecto al correrlo "no finalice" ya que la misma deja un hilo escuchando en un socket del puerto "8080".
 
 Dentro de la función `HelloWorld` usamos la biblioteca `encoding/json` que transforma un json en formato byte y utilizarlo posteriormente en la respuesta. Para retornar utilizamos `w.WriteHeader(http.StatusOK)` para indicar que el estado de respuesta es OK y `w.Write(respuesta)` con el contenido de la misma.
 
-Por ultimo, para probar nuestro codigo, tan solo debemos ir a un navegador de nuestra computadora e ingresar a `http://localhost:8080/helloworld`. Por default cuando ingresamos desde navegador a un ruta se ejecuta el verbo GET lo que nos permitirá ver en la pantalla lo siguiente:
+Por último, para probar nuestro código, tan solo debemos ir a un navegador de nuestra computadora e ingresar a `http://localhost:8080/helloworld`. Por default cuando ingresamos desde navegador a un ruta se ejecuta el verbo GET lo que nos permitirá ver en la pantalla lo siguiente:
 
 ![server-get-01](/img/guias/programacion/http-protocol/server-get-01.png)
 
 #### Query Path
 
-Ahora veamos un ejemplo de como usar un `query path`. Para esto tenemos el siguiente ejemplo
+Ahora veamos un ejemplo de como usar un `query path`. Para esto tenemos el siguiente ejemplo:
 
 ```go
 package main
@@ -92,7 +92,7 @@ func HelloWorld(w http.ResponseWriter, r *http.Request) {
 }
 ```
 
-Veamos que en este ejemplo tenemos dos cambios. El primero en la definición de nuestro handler tenemos un `GET /helloworld/{name}` definiendo que en nuestra ruta luego de helloworld vendra un string que representará la variable name. Dentro de nuestra función obtenemos dicha variable a traves de `r.PathValue("name")` y la asignamos a la variable interna `name` de la función para posteriormente utilizarla en la respuesta. Veamos asi un ejemplo:
+Veamos que en este ejemplo tenemos dos cambios. El primero es que en la definición de nuestro handler tenemos un `GET /helloworld/{name}` definiendo que en nuestra ruta luego de helloworld vendrá un string que representará la variable name. Dentro de nuestra función obtenemos dicha variable a traves de `r.PathValue("name")` y la asignamos a la variable interna `name` de la función para posteriormente utilizarla en la respuesta. Veamos así un ejemplo:
 
 ![server-get-02](/img/guias/programacion/http-protocol/server-get-02.png)
 
@@ -179,13 +179,13 @@ func HelloWorld(w http.ResponseWriter, r *http.Request) {
 }
 ```
 
-En este ejemplo vemos varios cambios. El primero es que necesitamos declarar un struct que nos permitirá definir el formato nuestro `body` que recibiremos. Dentro del mismo cada propiedad debera tener la definición `json:"name"` donde `name` sera el nombre dentro del JSON que enviaremos. Luego dentro de nuestro metodo HelloWorld deberemos transformar el body que recibimos (en formato String) en nuestro struct a traves de `json.NewDecoder(r.Body).Decode(&request)` siendo request una variable del tipo de nuestro struct. Luego utilizaremos la propiedad para imprimirla.
+En este ejemplo vemos varios cambios. El primero es que necesitamos declarar un struct que nos permitirá definir el formato nuestro `body` que recibiremos. Dentro del mismo cada propiedad deberá tener la definición `json:"name"` donde `name` sera el nombre dentro del JSON que enviaremos. Luego dentro de nuestro método HelloWorld deberemos transformar el body que recibimos (en formato String) en nuestro struct a traves de `json.NewDecoder(r.Body).Decode(&request)` siendo request una variable del tipo de nuestro struct. Luego utilizaremos la propiedad para imprimirla.
 
 ![server-post-01](/img/guias/programacion/http-protocol/server-post-01.png)
 
 ### Client-Side
 
-Bueno, vimos varios ejemplos de un servidor. Ahora haremos un ejemplo de un cliente que consume las api's que armamos. Para esto, haremos un ejemplo por cada tipo de dato que enviamos.
+Bueno, vimos varios ejemplos de un servidor. Ahora haremos un ejemplo de un cliente que consume las API's que armamos. Para esto, haremos un ejemplo por cada tipo de dato que enviamos.
 
 #### Query Path
 

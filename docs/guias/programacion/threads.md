@@ -10,7 +10,8 @@ Por un lado, los hilos de kernel (como su nombre lo indica) son entidades de ker
 
 Por otro lado, un hilo de usuario es una entidad utilizada por los programadores para manejar varios flujos de controles dentro de un programa. Este hilo solo existe dentro de un proceso por lo que no puede hacer referencia a un hilo de otro proceso; El sistema operativo NO sabe que existen. Se gestionan sin soporte del Sistema operativo por lo cual este solo reconoce un hilo de ejecución. Por esta ultima razon, todas las operaciones descritas se llevan a cabo en el espacio de usuario de un mismo proceso y el kernel lo continua planificando como una unidad y asignándole un úunico estado.  
 
-Ahora... Porque me estan explicando todo esto que vemos en la teoría. Bueno, hablemos de Golang.
+Ahora... Por qué me estan explicando todo esto que vemos en la teoría?. 
+Bueno, hablemos de Golang.
 
 Golang como todo lenguaje permite la creación a demanda de Hilos y a estos los llama ***"Rutinas"*** (A partir de ahora hablaremos de Rutinas para referirnos a los hilos creados por Golang). Estas rutinas son administradas por el motor de Golang, osea las rutinas que creemos son ***Hilos de usuario***. Dentro del motor existe un planificador (o Scheduler) que se encarga de planificar y administrar dichas rutinas dentro de ***hilos de kernel***. Hagamos una pausa. Miremos un diagrama
 
@@ -128,4 +129,4 @@ Primero, vemos que agregamos la sentencia "go" adelante de la invocacion a la fu
 
 Segundo, vemos que como las rutinas son hilos "hijos" del proceso "main" y si dicha función finaliza las rutinas moriran (tambien finalizaran) por lo que agregamos un "Sleep" para lograr que dicha función no finalice antes que lo hagan sus rutinas.
 
-Tercero, verificamos realmente que se ejecutan en hilos ya que el resultado ya no es deterministico y esto se debe a que existe una **condición de carrera**. Esta condición de carrera se da ya que todas las rutinas estan compitiendo por la utilización de la variable "valor" y como los hilos son planificados, en primera instancia, por el Scheduler de Golang y, en segunda instancia, por el sistema operativo. La solución a este problema lo veremos en la siguiente sección...
+Tercero, verificamos realmente que se ejecutan en hilos ya que el resultado ya no es deterministico y esto se debe a que existe una **condición de carrera**. Esta condición de carrera se da ya que todas las rutinas estan compitiendo por la utilización de la variable "valor" y debido a que los hilos son planificados, en primera instancia, por el Scheduler de Golang y, en segunda instancia, por el sistema operativo. La solución a este problema lo veremos en la siguiente sección...

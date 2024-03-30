@@ -12,7 +12,7 @@ Bueno... Hasta aca creo que venimos bien... Pero si quedaron dudas, vamos a empe
 
 ## Variables
 
-Golang es un lenguaje de bajo tipado. ¿Qué significa esto? El lenguaje nos permite definir una variable sin indicarle el tipo de dato que va a tener. Por otro lado, tambien podemos definir una variable indicandole su tipado asignamdole valor o no. De esta manera tenemos tres formas distintas de definir una variable:
+Golang es un lenguaje de bajo tipado. ¿Qué significa esto? El lenguaje nos permite definir una variable sin indicarle el tipo de dato que va a tener. Por otro lado, tambien podemos definir una variable indicandole su tipado asignándole valor o no. De esta manera tenemos tres formas distintas de definir una variable:
 
 ```go
 package main
@@ -55,7 +55,7 @@ var soyUnByte byte;
 
 ### Bool
 
-`bool` Representa un valor verdadero o falso. Si no se especifica ningun valor, Golang asigna predeterminadamente el valor "0". A continuación un ejemplo:
+`bool` Representa un valor verdadero o falso. Si no se especifica ningun valor, Golang asigna predeterminadamente el valor "0" (falso). A continuación un ejemplo:
 
 ```go
 package main
@@ -520,7 +520,7 @@ En esta función vemos que tenemos una función `imprimir` que se encarga solame
 
 ## Scopes - Variables y Funciones globales
 
-Hemos visto que es una variable y que es una función. Ahora empecemos a hablar de `scope`. Utilizamos la palabra `scope` para definir la reguion en la que existe una variable o función dentro de nuestro código, osea desde "donde se puede acceder a ellos". De esta manera, podemos empezar a definir variables o funciones que sean accesibles por todos o solo dentro de determinado fragmento de codigo. Analicemos un poco mas:
+Hemos visto que es una variable y que es una función. Ahora empecemos a hablar de `scope`. Utilizamos la palabra `scope` para definir la región en la que existe una variable o función dentro de nuestro código, osea desde "donde se puede acceder a ellos". De esta manera, podemos empezar a definir variables o funciones que sean accesibles por todos o solo dentro de determinado fragmento de codigo. Analicemos un poco mas:
 
 ```go
 package main
@@ -600,7 +600,7 @@ Resultado sumar: 3
 Resultado sumar2: 5
 ```
 
-Viendo este ejemplo tenemos una variable global llamada `valor1` que es accesible por todas las funciones. Dentro de nuestra función `main` vemos que declaramos una nueva variable con el mismo nombre pero asignando otro valor. Golang primero va a buscar la variable desde el scope actual hasta el mas externo. Dentro del scope de main cuando llamemos a `valor1` estaremos hablando de la variable que tiene el valor 1 resultando que el valor de `sumar` de 3 mientras que cuando invocamos a `sumar2` se utilice el valor de la variable declarada globalmente resultando el valor 5 ya que dentro del scope de dicha función no existe una variable declarada con dicho valor.
+Viendo este ejemplo tenemos una variable global llamada `valor1` que es accesible por todas las funciones. Dentro de nuestra función `main` vemos que declaramos una nueva variable con el mismo nombre pero asignando otro valor. Golang primero va a buscar la variable desde el scope actual hasta el mas externo. Dentro del scope de main cuando llamemos a `valor1` estaremos hablando de la variable que tiene como valor 1 resultando que el valor de `sumar` sea 3, mientras que cuando invocamos a `sumar2` se utilice el valor de la variable declarada globalmente resultando el valor 5 ya que dentro del scope de dicha función no existe una variable declarada con dicho valor.
 
 El objetivo de esto es "CUIDAR" como se nombran a las variables en nuestro código. Golang va a ser exclusivamente lo que nosotros le indiquemos y va a tomar el valor de la variable en el scope en el que este en ese momento.
 
