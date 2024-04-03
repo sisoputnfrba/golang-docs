@@ -24,7 +24,7 @@ export default defineConfig({
       copyright: 'Universidad Tecnológica Nacional | Facultad Regional Buenos Aires',
     },
     editLink: {
-      pattern: 'https://github.com/sisoputnfrba/docs/edit/main/docs/:path',
+      pattern: 'https://github.com/sisoputnfrba/golang-docs/edit/main/docs/:path',
       text: 'Editar esta página en GitHub',
     },
     lastUpdatedText: 'Última actualización',
