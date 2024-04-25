@@ -18,11 +18,11 @@ export const sidebar: DefaultTheme.Sidebar = [
       },
       {
         text: 'Enunciado del TP',
-        link: 'https://faq.utnso.com.ar/enunciado'
+        link: 'https://faq.utnso.com.ar/tp-go'
       },
       {
         text: 'Documento de Pruebas',
-        link: 'https://faq.utnso.com.ar/pruebas',
+        link: 'https://faq.utnso.com.ar/pruebas-go',
       },
       {
         text: 'TPs Anteriores',
