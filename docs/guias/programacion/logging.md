@@ -22,9 +22,17 @@ if debug {
 }
 ```
 
-Por otro lado, también estaría bueno que en las pruebas los mensajes no solo se
+También nos va a servir mucho que los mensajes nos impriman la fecha y hora en
+la que se generaron, para poder saber cuándo ocurrieron los eventos:
+
+```go
+fmt.Fprintln(file, time.Now().Format(time.StampMicro), "Mensaje obligatorio")
+```
+
+Y, de paso, sería útil que en las pruebas los mensajes no solo se
 impriman por pantalla, sino también en un archivo de texto, para poder
-revisarlos tranquilos luego de que el programa finalice:
+revisarlos tranquilos luego de que el programa finalice. Pero si no estamos en
+la prueba, con que se impriman por pantalla ya estaría bien:
 
 ```go
 if debug {
@@ -34,18 +42,8 @@ if debug {
 }
 ```
 
-Y, de paso, estaría bueno que los mensajes nos impriman la fecha y hora en la
-que se generaron, para poder saber cuándo ocurrieron los eventos:
-
-```go
-if debug {
-    fmt.Fprintln(file, time.Now().Format("2006-01-02 15:04:05"), "Mensaje obligatorio")
-} else {
-    os.WriteFile("log.txt", []byte(time.Now().Format("2006-01-02 15:04:05") + " Mensaje obligatorio"), os.ModeAppend)
-}
-```
-
-Para simplificar un poco las cosas, podríamos crear una función que haga todo
+Imprimir por pantalla ya se está complicando más de lo que nos gustaría.
+Para simplificar un poco las cosas podríamos crear una función que haga todo
 esto más sencillo, pero... ¿no sería más fácil si Go ya nos proveyera de un
 paquete que se encargue de hacerlo? :thinking:
 
