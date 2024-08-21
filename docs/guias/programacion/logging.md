@@ -126,11 +126,11 @@ Y, en caso de ser necesario, ya saben, estamos acá para ayudarlos. :wink:
 
 En aplicaciones modernas, resulta fundamental contar con logs que nos ayuden a
 comprender el estado interno del sistema a lo largo del tiempo. De esta forma,
-en caso de surgir un error, el equipo a cargo puede ponerse a investigar en
-busca de información que les permita identificar la causa del problema.
+en caso de surgir un error, el equipo a cargo puede usarlos para investigar por
+qué el sistema falló en ese preciso momento.
 
 Es por esto que `log/slog` también provee otras funcionalidades (que no vamos a
-usar para el TP) como, por ejemplo:
+necesitar para el TP) como, por ejemplo:
 
 - Permitir agregar campos adicionales a los mensajes, en forma de pares
   clave-valor:
@@ -163,11 +163,13 @@ slog.Info("hello, world")
 => {"time":"2023-08-04T16:58:02.939245411-04:00","level":"INFO","msg":"hello, world"}
 ```
 
-La capacidad de un sistema de poder comprender su estado interno analizando los
-logs (junto con métricas y trazas de ejecución) se la conoce como
-[observabilidad]. Si bien en el TP no vamos a profundizar en este tema y
-solamente utilizaremos logs para imprimir mensajes por pantalla, esperamos que
-esto les sirva como punto de partida para investigar más sobre el tema por su
-propia cuenta.
+Esta capacidad de un sistema de poder comprender su estado interno analizando
+los logs (junto con otras herramientas como métricas y trazas de ejecución) se
+la conoce como [observabilidad].
+
+Si bien en el TP no vamos a profundizar en este tema y solamente utilizaremos
+logs para evaluar el correcto funcionamiento de cada módulo, esperamos que esta
+sección les haya servido como punto de partida para investigar más sobre el tema
+por su propia cuenta.
 
 [observabilidad]: https://www.elastic.co/es/what-is/observability
