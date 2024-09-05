@@ -28,13 +28,13 @@ las funciones vacías y comentarios que les dejamos en el código.
 ::: tip
 
 Pueden hacernos cualquier pregunta que tengan sobre el enunciado, o cualquier
-otro concepto en los [medios de consulta de la práctica](/consultas).
+otro concepto en los [medios de consulta de la práctica](https://faq.utnso.com.ar/docs/consultas).
 
 :::
 
 ## Requisitos
 
-- [Contar con un entorno Linux](/primeros-pasos/entorno-linux)
+- [Contar con un entorno Linux](https://faq.utnso.com.ar/docs/primeros-pasos/entorno-linux)
 - Tener instalado golang y git
 - Tener a mano el [repo del TP0](https://faq.utnso.com.ar/tp0-golang)
 
