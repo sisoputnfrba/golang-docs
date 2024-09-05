@@ -81,7 +81,7 @@ for i := 0; i < MaxGoroutines; i++ {
 }
 ```
 
-## Cómo elegir que usar 
+## Cómo elegir que usar
 
 `sync.WaitGroup` se utiliza principalmente para esperar la finalización de un conjunto específico de rutinas antes de continuar la ejecución. Útil cuando el número de rutinas es conocido de antemano.
 
@@ -121,7 +121,7 @@ func thread() {
 }
 ```
 
-```Output
+```txt
 Este es el hilo número 2
 Este es el hilo número 4
 Este es el hilo número 5
@@ -180,7 +180,7 @@ func thread() {
 }
 ```
 
-```Output
+```txt
 Este es el hilo número 1
 Este es el hilo número 2
 Este es el hilo número 4
@@ -241,7 +241,7 @@ func thread() {
 }
 ```
 
-```Output
+```txt
 Este es el hilo número 1
 Este es el hilo número 2
 Este es el hilo número 3
@@ -302,7 +302,7 @@ func thread() {
 }
 ```
 
-```Output
+```txt
 Este es el hilo número 1
 Este es el hilo número 2
 Este es el hilo número 3
@@ -379,7 +379,7 @@ func productor() {
 		fmt.Println("Producimos el valor ", valor)
 		valor++
 		mutex.Unlock()
-		
+
 		// Informamos a consumidores que tienen un recurso en el mercado
 		<-sem_consumidor
 	}
@@ -404,7 +404,7 @@ func consumidor() {
 }
 ```
 
-```Output
+```txt
 ...
 Producimos el valor  1963
 Consumimos el valor  1961

@@ -22,7 +22,7 @@ func main() {
 }
 ```
 
-```Output
+```txt
 Resultado 11
 ```
 
@@ -40,7 +40,7 @@ func main() {
 }
 ```
 
-```Output
+```txt
 Resultado 9
 ```
 
@@ -60,7 +60,7 @@ func main() {
 }
 ```
 
-```Output
+```txt
 +i = 10
 -i = -10
 ```
@@ -82,7 +82,7 @@ func main() {
 }
 ```
 
-```Output
+```txt
 ^i =  -3
 ```
 
@@ -99,7 +99,7 @@ func main() {
 }
 ```
 
-```Output
+```txt
 !i = false
 ```
 
@@ -119,7 +119,7 @@ func main() {
 }
 ```
 
-```Output
+```txt
 i + k =  15
 i - k =  5
 ```
@@ -140,7 +140,7 @@ func main() {
 }
 ```
 
-```Output
+```txt
 i * k =  30
 i / k =  3
 i % k =  1
@@ -178,7 +178,7 @@ func main() {
 }
 ```
 
-```Output
+```txt
 i < j =  false
 i > j =  true
 i >= j =  true
@@ -216,7 +216,7 @@ func main() {
 }
 ```
 
-```Output
+```txt
 Verde =  true
 Violeta =  false
 Naranja =  false
@@ -249,7 +249,7 @@ func main() {
 }
 ```
 
-```Output
+```txt
 i += 5 is  15
 i -= 3 is  12
 i *= 4 is  48

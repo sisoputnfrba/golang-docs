@@ -4,7 +4,7 @@ En esta seccion hablaremos de las diferencias sentencias que posee Golang. Las s
 
 ## IF THEN
 
-Como su nombre lo indica nos permitirá hacer una declaración condicional. 
+Como su nombre lo indica nos permitirá hacer una declaración condicional.
 
 ```go
 package main
@@ -18,15 +18,15 @@ func main() {
 }
 ```
 
-```Output
+```txt
 Menor de edad!
 ```
 
 Para entender esto, volvamos un poco a Algoritmos base, la logica del if es la siguiente:
 
-```Linux
+```txt
 +---------+
-|  Start  | 
+|  Start  |
 +---------+
      |
 	 V
@@ -34,7 +34,7 @@ Para entender esto, volvamos un poco a Algoritmos base, la logica del if es la s
 	| Condition			|-----------+
 	+-------------------+			|
 		|							|
-		| True						| False					
+		| True						| False
 		| 							|
 		V							|
 	+-----------------+				|
@@ -44,7 +44,7 @@ Para entender esto, volvamos un poco a Algoritmos base, la logica del if es la s
 		|							|
 		V							|
 +---------+							|
-|  End	  |-------------------------+ 
+|  End	  |-------------------------+
 +---------+
 ```
 
@@ -66,15 +66,15 @@ func main() {
 }
 ```
 
-```Output
+```txt
 Mayor de edad!
 ```
 
 Volvamos a ver como se modificaría nuestro diagrama de algoritmos.
 
-```Linux
+```txt
 +---------+
-|  Start  | 
+|  Start  |
 +---------+
      |
 	 V
@@ -82,7 +82,7 @@ Volvamos a ver como se modificaría nuestro diagrama de algoritmos.
 	| Condition			|-----------+
 	+-------------------+			|
 		|							|
-		| True						| False					
+		| True						| False
 		| 							|
 		V							|
 	+-----------------+				|
@@ -116,13 +116,13 @@ func main() {
 }
 ```
 
-```Output
+```txt
 Jubilado
 ```
 
 ## Sentencia SWITCH
 
-La sentencia switch como su nombre lo indica es una sentencia de caso. Esta sentencia toma una expresión y la evalúa. Por cada posible resultado ejecuta las correspondientes sentencias mientras que el caso predeterminado se ejecuta si alguno de los casos no se satisface. 
+La sentencia switch como su nombre lo indica es una sentencia de caso. Esta sentencia toma una expresión y la evalúa. Por cada posible resultado ejecuta las correspondientes sentencias mientras que el caso predeterminado se ejecuta si alguno de los casos no se satisface.
 
 ```go
 package main
@@ -151,7 +151,7 @@ func funcionCase(a string) {
 }
 ```
 
-```Output
+```txt
 Abeja
 Dado
 No se que es!
@@ -159,9 +159,9 @@ No se que es!
 
 Volviendo un poco a algoritmos expresemos esto en un diagrama.
 
-```Linux
+```txt
 +-----------------------+
-|  Switch (expression)  | 
+|  Switch (expression)  |
 +-----------------------+
      |
 	 V
@@ -209,20 +209,20 @@ func main() {
 }
 ```
 
-```Output
-0 1 2 3 4 5 6 7 8 9 
+```txt
+0 1 2 3 4 5 6 7 8 9
 ```
 
 Expresemos esto en un diagrama de algoritmos.
 
-```Linux
+```txt
 +---------+
-|  Start  | 
+|  Start  |
 +---------+
      |
 	 V
 +---------+
-|  i = 1  | 
+|  i = 1  |
 +---------+
      |
 	 V
@@ -232,13 +232,13 @@ Expresemos esto en un diagrama de algoritmos.
 |		| True					|
 |		V						|
 |	+----------------------+	|
-|	|  Program Statements  |----- 
+|	|  Program Statements  |-----
 |	+----------------------+
 |False
 |
 V
 +---------+
-|  End	  | 
+|  End	  |
 +---------+
 ```
 
@@ -260,15 +260,15 @@ func main() {
 }
 ```
 
-```Output
-0 1 2 3 4 5 6 7 8 9 
+```txt
+0 1 2 3 4 5 6 7 8 9
 ```
 
 Para finalizar, vemos el diagrama algoritmico de como funciona esta sentencia:
 
-```Linux
+```txt
 +---------+
-|  Start  | 
+|  Start  |
 +---------+
      |
 	 V
@@ -278,12 +278,12 @@ Para finalizar, vemos el diagrama algoritmico de como funciona esta sentencia:
 |		| True					|
 |		V						|
 |	+----------------------+	|
-|	|  Program Statements  |----- 
+|	|  Program Statements  |-----
 |	+----------------------+
 |False
 |
 V
 +---------+
-|  End	  | 
+|  End	  |
 +---------+
 ```

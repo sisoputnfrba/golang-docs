@@ -226,7 +226,7 @@ func main() {
 }
 ```
 
-```Output
+```txt
 "Hola pepe! Como andas?"
 ```
 
@@ -275,7 +275,7 @@ func main() {
 }
 ```
 
-```Output
+```txt
 "Hola pepe! Como andas?"
 ```
 
@@ -333,7 +333,7 @@ func main() {
 }
 ```
 
-```Output
+```txt
 "Hola pepe! Como andas?"
 ```
 
