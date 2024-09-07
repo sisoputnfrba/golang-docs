@@ -11,9 +11,9 @@ hero:
     alt: Tux
   actions:
     - theme: brand
-      text: Primeros pasos →
-      link: /primeros-pasos/
+      text: Guías →
+      link: /guias/
     - theme: alt
       text: ¡Tengo una duda!
-      link: /consultas
+      link: https://faq.utnso.com.ar/docs/consultas
 ---

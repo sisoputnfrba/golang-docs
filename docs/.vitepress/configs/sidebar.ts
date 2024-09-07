@@ -9,12 +9,12 @@ export const sidebar: DefaultTheme.Sidebar = [
         link: '/recursos/vms',
       },
       {
-        text: 'Commons Library',
-        link: 'https://faq.utnso.com.ar/commons'
+        text: 'Documentación de Go',
+        link: 'https://pkg.go.dev/',
       },
       {
-        text: 'Linux man pages',
-        link: 'https://man7.org/linux/man-pages/'
+        text: 'Tour of Go',
+        link: 'https://go.dev/tour',
       },
       {
         text: 'Enunciado del TP',
@@ -27,11 +27,7 @@ export const sidebar: DefaultTheme.Sidebar = [
       {
         text: 'TPs Anteriores',
         link: '/recursos/tps-anteriores',
-      },
-      {
-        text: '¿Quiénes somos?',
-        link: '/quienes-somos',
-      },
+      }
     ]
   },
   {
@@ -39,20 +35,28 @@ export const sidebar: DefaultTheme.Sidebar = [
     collapsed: true,
     items: [
       {
+        text: 'Introducción al Trabajo Práctico',
+        link: 'https://faq.utnso.com.ar/docs/primeros-pasos/'
+      },
+      {
         text: '¿Dónde me anoto?',
-        link: '/primeros-pasos/'
+        link: 'https://faq.utnso.com.ar/docs/primeros-pasos/donde-me-anoto'
       },
       {
         text: 'Normas del Trabajo Práctico',
-        link: '/primeros-pasos/normas-tp'
+        link: 'https://faq.utnso.com.ar/docs/primeros-pasos/normas-tp'
       },
       {
         text: 'Conseguir un entorno Linux',
-        link: '/primeros-pasos/entorno-linux'
+        link: 'https://faq.utnso.com.ar/docs/primeros-pasos/entorno-linux'
       },
       {
         text: '¿Qué es Golang?',
         link: '/primeros-pasos/lenguaje-golang'
+      },
+      {
+        text: 'Git para el Trabajo Práctico',
+        link: 'https://faq.utnso.com.ar/docs/guias/consola/git'
       },
       {
         text: 'Trabajo Práctico 0',
@@ -65,20 +69,16 @@ export const sidebar: DefaultTheme.Sidebar = [
     collapsed: true,
     items: [
       {
-        text: 'Guía de uso de Bash',
-        link: '/guias/consola/bash'
+        text: 'Mario Bash',
+        link: 'https://faq.utnso.com.ar/mariobash'
       },
       {
-        text: 'Git para el Trabajo Práctico',
-        link: '/guias/consola/git'
+        text: 'Guía de uso de Bash',
+        link: 'https://faq.utnso.com.ar/docs/guias/consola/bash'
       },
       {
         text: 'Rutas Relativas y Absolutas',
-        link: '/guias/consola/rutas'
-      },
-      {
-        text: 'Mario Bash',
-        link: 'https://faq.utnso.com.ar/mariobash'
+        link: 'https://faq.utnso.com.ar/docs/guias/consola/rutas'
       },
       {
         text: 'Learn Git Branching',

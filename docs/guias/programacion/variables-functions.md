@@ -29,13 +29,13 @@ func main() {
 }
 ```
 
-```Output
+```txt
 Valor no tipado:  123456
 Valor tipado sin valor:  0
 Valor tipado con valor:  456789
 ```
 
-Cabe resaltar que cuando nosotros declaramos una variable tipada sin valor Golang predeterminadamente le asigna uno dependiendo el tipo de dato. Cada valor varia del tipo de dato y lo veremos a continuación. 
+Cabe resaltar que cuando nosotros declaramos una variable tipada sin valor Golang predeterminadamente le asigna uno dependiendo el tipo de dato. Cada valor varia del tipo de dato y lo veremos a continuación.
 
 Golang posee tipos de datos básicos y tipos de datos compuestos. Vamos a ver.
 
@@ -70,7 +70,7 @@ func main() {
 }
 ```
 
-```Output
+```txt
 Boolean sin valor:  false
 Boolean con valor:  true
 ```
@@ -92,8 +92,8 @@ func main() {
 }
 ```
 
-```Output
-String sin valor:  
+```txt
+String sin valor:
 String con valor:  Soy una cadena
 ```
 
@@ -114,7 +114,7 @@ func main() {
 }
 ```
 
-```Output
+```txt
 Entero sin valor:  0
 Entero con valor:  123
 ```
@@ -136,7 +136,7 @@ func main() {
 }
 ```
 
-```Output
+```txt
 Flotante sin valor:  0
 Flotante con valor:  17.23
 ```
@@ -158,7 +158,7 @@ func main() {
 }
 ```
 
-```Output
+```txt
 Byte sin valor:  0
 Byte con valor:  1
 ```
@@ -190,13 +190,13 @@ func main() {
 	fmt.Println("Array sin valor: ", arraySinValor)
 	fmt.Println("Array con valor: ", arrayConValor)
 
-	// El indice comienza desde la posicion 0, por lo que el 
+	// El indice comienza desde la posicion 0, por lo que el
 	// valor 3 es la posición 2 del array
 	fmt.Println("Valor 3 del array: ", arrayConValor[2])
 }
 ```
 
-```Output
+```txt
 Array sin valor:  [0 0 0 0 0]
 Array con valor:  [1 2 3 4 5]
 Valor 3 del array:  3
@@ -239,7 +239,7 @@ func main() {
 
 ```
 
-```Output
+```txt
 Slice sin valor:  []
 Slice con valor:  [1 2 3 4 5]
 Tamaño del slice con valor:  5
@@ -269,7 +269,7 @@ func main() {
 }
 ```
 
-```Output
+```txt
 Primeros dos elementos: [1 2]
 Ultimos elementos: [3 4 5]
 Slice sin el elemento 3: [1 2 4 5]
@@ -307,7 +307,7 @@ func main() {
 }
 ```
 
-```Output
+```txt
 Map sin valor:  map[]
 Map con valor:  map[Ana:30 Juan:28]
 Valor para Juan:  28
@@ -348,7 +348,7 @@ func main() {
 }
 ```
 
-```Output
+```txt
 Struct sin valor: { 0 0}
 Struct con valor: {Nahuel 32 1.77}
 Nombre del struct: Nahuel
@@ -383,7 +383,7 @@ func main() {
 }
 ```
 
-```Output
+```txt
 Array de bytes: [72 111 108 97]
 Nueva cadena: Hola
 ```
@@ -418,12 +418,12 @@ func main() {
 }
 ```
 
-```Output
+```txt
 Array de bytes: [65 66 67 226 130 172]
 Nueva cadena: ABC€
 ```
 
-En este ejemplo estamos usando el simbolo "€" que en codigo UTF-8 se representa por 3 bytes!! Así tenemos que nuestra cadena en vez de ocupar cuatro bytes como en el primero ejemplo acá ocupa 6. 
+En este ejemplo estamos usando el simbolo "€" que en codigo UTF-8 se representa por 3 bytes!! Así tenemos que nuestra cadena en vez de ocupar cuatro bytes como en el primero ejemplo acá ocupa 6.
 
 La pregunta es, ¿Cual es el objetivo de esto? Si en algún momento (SPOILER ALERT!!) deben guardar cosas en un `[]byte` tienen que saber que no siempre una secuencia de N caracteres va a ocupar N bytes. Y como deberán manejar esto, con sabiduria, inteligencia (y spoiler, las operaciones que antes vimos de slices como por ejemplo `len()`).
 
@@ -451,7 +451,7 @@ func sumar(a int, b int) int {
 }
 ```
 
-```Output
+```txt
 Resultado: 3
 ```
 
@@ -483,7 +483,7 @@ func divideFloat(a int, b int) float32 {
 }
 ```
 
-```Output
+```txt
 Dividir Enteros 20/8: 2
 Dividir 20/8: 2.5
 Dividir 8/20: 0.4
@@ -511,7 +511,7 @@ func imprimir(a int) {
 }
 ```
 
-```Output
+```txt
 El valor es: 20
 El valor es: 8
 ```
@@ -541,7 +541,7 @@ func sumar(a int, b int) int {
 }
 ```
 
-```Output
+```txt
 Resultado: 3
 ```
 
@@ -565,7 +565,7 @@ func sumar2(b int) int {
 }
 ```
 
-```Output
+```txt
 Resultado sumar2: 5
 ```
 
@@ -595,7 +595,7 @@ func sumar2(b int) int {
 }
 ```
 
-```Output
+```txt
 Resultado sumar: 3
 Resultado sumar2: 5
 ```
@@ -627,11 +627,10 @@ func sumar(a int, b int) int {
 }
 ```
 
-```Output
+```txt
 Resultado sumar: 4
 ```
 
 En este ejemplo vemos que declaramos dentro de la funcion main una nueva variable `sumar` que representa una funcion que recibe dos parametros (de igual manera a la que esta de manera global). Al igual que con las variables, Golang va a ir buscando la funcion `sumar` desde el scope actual hasta el mas externo. Al tener tanto una funcion global como una particular definida dentro del scope de la función `main` terminará ejecutando la interna.
 
 A donde queremos llegar con esto... Golang nos permite la construcción de nuestro código de manera Imperativa (código lineal con funciones e instrucciones paso a paso) o nos permite si somos muy cuidadoso trabajar nuestro código orientado a Objetos. Esto lo veremos cuando estemos mas avanzados en este tutorial.
-
