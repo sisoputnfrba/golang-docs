@@ -6,11 +6,11 @@ export const sidebar: DefaultTheme.Sidebar = [
     items: [
       {
         text: 'Máquinas virtuales',
-        link: '/recursos/vms',
+        link: 'https://faq.utnso.com.ar/docs/recursos/vms',
       },
       {
         text: 'Documentación de Go',
-        link: 'https://pkg.go.dev/',
+        link: 'https://pkg.go.dev',
       },
       {
         text: 'Tour of Go',
@@ -26,7 +26,7 @@ export const sidebar: DefaultTheme.Sidebar = [
       },
       {
         text: 'TPs Anteriores',
-        link: '/recursos/tps-anteriores',
+        link: 'https://faq.utnso.com.ar/docs/recursos/tps-anteriores',
       }
     ]
   },
