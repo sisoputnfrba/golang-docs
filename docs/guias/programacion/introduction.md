@@ -83,7 +83,7 @@ Por otro lado, podemos extender un poco este comando para personalizar el ejecut
 
 #### Compilando en Windows
 
-Para compilar en windows utilizaremos el siguiente comando
+Para compilar en Windows utilizaremos el siguiente comando
 
 ```bash
 $ go build -o compilado-hello-world.exe hello-world.go
@@ -91,7 +91,7 @@ $ go build -o compilado-hello-world.exe hello-world.go
 
 #### Compilando en MacOs/Linux
 
-Para compilar en windows utilizaremos el siguiente comando
+Para compilar en MacOs/Linux utilizaremos el siguiente comando
 
 ```bash
 $ go build -o compilado-hello-world hello-world.go
