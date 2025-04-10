@@ -45,7 +45,7 @@ otro concepto en los [medios de consulta de la práctica](https://faq.utnso.com.
 Primero, vamos a _forkear_ el repo del TP0 y clonarlo en nuestra VM. Para ello,
 en la página de GitHub del repo hay un botón "Fork":
 
-![fork-repo](/img/primeros-pasos/tp0/github-fork-repo.png){data-zoomable}
+![fork-repo](https://faq.utnso.com.ar/docs/img/primeros-pasos/tp0/github-fork-repo.png){data-zoomable}
 
 Que nos llevará a una página para elegir el nombre de nuestro repo forkeado, al
 que también llamaremos `tp0`.
