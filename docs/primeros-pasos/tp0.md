@@ -36,7 +36,7 @@ otro concepto en los [medios de consulta de la práctica](https://faq.utnso.com.
 
 - [Contar con un entorno Linux](https://faq.utnso.com.ar/docs/primeros-pasos/entorno-linux)
 - Tener instalado golang y git
-- Tener a mano el [repo del TP0](https://faq.utnso.com.ar/tp0-golang)
+- Tener a mano el [repo del ](https://faq.utnso.com.ar/tp0-golang)
 
 ## Etapa 1: Setup inicial
 
@@ -48,7 +48,7 @@ en la página de GitHub del repo hay un botón "Fork":
 ![fork-repo](https://faq.utnso.com.ar/docs/img/primeros-pasos/tp0/github-fork-repo.png){data-zoomable}
 
 Que nos llevará a una página para elegir el nombre de nuestro repo forkeado, al
-que también llamaremos `tp0`.
+que también llamaremos `tp0-golang`.
 
 ::: warning IMPORTANTE
 
