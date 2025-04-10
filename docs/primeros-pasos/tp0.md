@@ -36,7 +36,7 @@ otro concepto en los [medios de consulta de la práctica](https://faq.utnso.com.
 
 - [Contar con un entorno Linux](https://faq.utnso.com.ar/docs/primeros-pasos/entorno-linux)
 - Tener instalado golang y git
-- Tener a mano el [repo del ](https://faq.utnso.com.ar/tp0-golang)
+- Tener a mano el [repo del TP0](https://faq.utnso.com.ar/tp0-golang)
 
 ## Etapa 1: Setup inicial
 
@@ -130,11 +130,11 @@ git clone git@github.com:TuUsuarioDeGitHub/tp0-golang.git
 Ahora, en el Visual Studio Code vamos a movernos hacia
 `Archivo > Abrir carpeta ...`:
 
-![open-folder](https://faq.utnso.com.ar/img/primeros-pasos/tp0/open-folder.png)
+![open-folder](/img/primeros-pasos/tp0/open-folder.png)
 
 Y vamos a seleccionar la carpeta donde clonamos el repositorio del TP0:
 
-![select-folder](https://faq.utnso.com.ar/img/primeros-pasos/tp0/select-folder.png)
+![select-folder](/img/primeros-pasos/tp0/select-folder.png)
 
 ## Etapa 2: Comandos básicos
 
