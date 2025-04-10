@@ -40,17 +40,94 @@ otro concepto en los [medios de consulta de la práctica](https://faq.utnso.com.
 
 ## Etapa 1: Setup inicial
 
-### Crear un workspace
+### Forkear el repositorio
 
-Primero, abramos una consola y, de la misma forma que bajamos el proyecto de las
-commons, bajemos el del TP0:
+Primero, vamos a _forkear_ el repo del TP0 y clonarlo en nuestra VM. Para ello,
+en la página de GitHub del repo hay un botón "Fork":
+
+![fork-repo](https://faq.utnso.com.ar/docs/img/primeros-pasos/tp0/github-fork-repo.png){data-zoomable}
+
+Que nos llevará a una página para elegir el nombre de nuestro repo forkeado, al
+que también llamaremos `tp0-golang`.
+
+::: warning IMPORTANTE
+
+Cuando les toque hacer el TP cuatrimestral, **no deberán forkear el
+repositorio**, ya que todo el grupo estará obligado a trabajar en el repositorio
+provisto por la cátedra como está establecido en las
+[Normas del Trabajo Práctico](https://faq.utnso.com.ar/docs/primeros-pasos/normas-tp).
+
+:::
+
+### Configurar las credenciales de Git
+
+Para poder clonar el repo, vamos a necesitar autenticarnos en GitHub. Existen
+varias formas de hacerlo, pero la que vamos a utilizar en este caso es
+generando un par de claves SSH y agregándolas a nuestra cuenta de GitHub.
+
+Entonces, para generar dichas claves, vamos a abrir una terminal y ejecutar el
+siguiente comando:
 
 ```bash
-git clone https://github.com/sisoputnfrba/tp0-golang
-cd tp0
+ssh-keygen -t ed25519 -C "your@email.com"
 ```
 
-Luego, en el Visual Studio Code vamos a movernos hacia
+Donde `"your@email.com"` es el email que tienen asociado a su cuenta de GitHub.
+
+Luego, vamos a seguir las instrucciones que nos da el comando para generar las
+claves. Por defecto, se van a guardar en el directorio `~/.ssh/` con los nombres
+`id_ed25519` y `id_ed25519.pub`.
+
+Por último, vamos a agregar la clave pública a nuestra cuenta de GitHub
+moviéndonos a `Settings` > `SSH and GPG keys` > `New SSH key`.
+
+- El tipo de clave es `Authentication Key`
+- La clave es el contenido de la clave pública que generamos, el cual pueden ver
+  con el comando `cat ~/.ssh/id_ed25519.pub`.
+
+Una vez hecho esto, podemos verificar que todo está configurado correctamente
+con el comando:
+
+```bash
+ssh -T git@github.com
+```
+
+::: warning IMPORTANTE
+
+La primera vez nos va a preguntar si queremos agregar la clave a la lista de
+hosts conocidos:
+
+```txt
+The authenticity of host 'github.com' can't be established.
+ED25519 key fingerprint is SHA256:+asdrfadfasfsdf/asdfsdafsdafdsafdf.
+This key is not known by any other names
+Are you sure you want to continue connecting (yes/no/[fingerprint])?
+```
+
+Vamos a responder `yes` para agregar la clave a la lista de hosts conocidos
+y poder autenticarnos.
+
+:::
+
+Si todo salió bien, deberíamos ver un mensaje de bienvenida de GitHub:
+
+```
+Hi TuUsuarioDeGitHub! You've successfully authenticated, but GitHub does not provide shell access.
+```
+
+### Clonar el repositorio
+
+Una vez que tengamos nuestro repo forkeado, vamos a clonarlo en nuestra VM con
+`git clone` copiando el link que se encuentra en la pestaña `SSH`, ya que es el
+método que configuramos anteriormente.
+
+```bash
+git clone git@github.com:TuUsuarioDeGitHub/tp0-golang.git
+```
+
+### Crear un workspace
+
+Ahora, en el Visual Studio Code vamos a movernos hacia
 `Archivo > Abrir carpeta ...`:
 
 ![open-folder](/img/primeros-pasos/tp0/open-folder.png)
